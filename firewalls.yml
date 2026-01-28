@@ -2,7 +2,6 @@
 poll_interval_seconds: 30
 request_timeout_seconds: 10
 max_concurrency: 15
-
 listen_host: 0.0.0.0
 listen_port: 9109
 
@@ -11,10 +10,13 @@ firewalls:
     host: 10.0.0.11
     api_key: "PASTE_KEY_HERE"
     verify_ssl: false
+    expected_tunnels:
+      - tunnel: ipsec-tunnel-1
+        peer: 10.10.10.13
+        gateway: tunnel1
+      - tunnel: ipsec-tunnel-2
+        peer: 10.10.10.14
+        gateway: tunnel2
 
-  - name: fw02
-    host: 10.0.0.12
-    api_key: "PASTE_KEY_HERE"
-    verify_ssl: false
 
 # add as many devices as needed
