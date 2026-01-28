@@ -155,8 +155,6 @@ def parse_ipsec_sa(xml_text: str) -> List[Tuple[str, str]]:
     if result is None:
         return out
 
-    # Try to find entries that look like SAs
-    # We attempt multiple patterns to be resilient.
     for entry in result.findall(".//entry"):
         # Look for tunnel name in <name> or <tunnel> or <tunnel-name>
         tunnel = (
