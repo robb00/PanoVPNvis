@@ -16,3 +16,5 @@ firewalls:
     host: 10.0.0.12
     api_key: "PASTE_KEY_HERE"
     verify_ssl: false
+
+# add as many devices as needed
